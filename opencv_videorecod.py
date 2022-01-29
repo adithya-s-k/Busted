@@ -1,9 +1,17 @@
+from re import I
 import numpy as np
 import os
 import cv2
+import random 
+import string
+import secrets
 
+def randomString(stringLength):
+    N = stringLength
+    res = ''.join(secrets.choice(string.ascii_uppercase + string.digits)for i in range(N))
+    return str(res)
 
-filename = 'video.mp4'
+filename = str(randomString(7))+".mp4" 
 frames_per_second = 24.0
 res = '720p'
 
