@@ -34,35 +34,10 @@ def email_send(fileNameInput):
         smtp.send_message(msg)
 
 def mainFunction():
-    find_motion()
-    time.sleep(2)
+    # find_motion()
+    # time.sleep(2)
     email_send('stolenVideo.mp4')
 
-# window =  tk.Tk()
-# window.title = "find stolen"
-# window.geometry("500x300")
-
-
-# #label
-# label = tk.Label(window, text="Welcome")
-# label.grid(row=0, column=1)
-# label['font'] = font.Font(size=35, weight='bold',family='Helvetica')
-
-# #button font
-# btn_font = font.Font(size=15, weight='bold',family='Helvetica')
-
-# #button main
-# button1 = tk.Button(window, text="spot diff",fg="green", height=3, width=10, command=mainFunction)
-# button1['font'] = btn_font
-# button1.grid(row=1, pady=(25,10),padx=(10,0), column = 0)
-
-
-
-
-# #footer
-# label2 = tk.Label(window, text="thanks for using")
-# label2.grid(row=2, columnspan = 3)
-# label2['font'] = font.Font(size=20, weight='bold',family='Helvetica')
 root = tk.Tk(className='Main MENU')
 root.geometry("620x1000")
 root.minsize(620,1000)
@@ -71,7 +46,6 @@ root.maxsize(620,1000)
 introFrame = tk.Frame(root, bg= "#F5F7FD" )
 introFrame.place(height=1000, width=630, x=0, y=0)
 
-# window.mainloop()
 landingImage = (Image.open("Assets\image 2.png"))
 landingImage = landingImage.resize((630,660), Image.ANTIALIAS)
 landingImage = ImageTk.PhotoImage(landingImage)
