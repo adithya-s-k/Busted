@@ -1,7 +1,7 @@
 import cv2
 import time
 from skimage.metrics import structural_similarity
-from datetime import datetime
+from datetime import *
 
 def spot_diff(frame1, frame2):
 

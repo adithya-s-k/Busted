@@ -1,6 +1,12 @@
 import tkinter as tk
 import tkinter.font as font
-from find_motion import find_motion
+from find_motion import *
+from threading import Thread
+
+def mainFunction():
+    if __name__ == '__main__':
+        Thread(target = find_motion).start()
+        # Thread(target = verification).start()
 
 
 window =  tk.Tk()

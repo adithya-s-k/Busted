@@ -4,10 +4,13 @@ import time
 import numpy as np
 import os
 import cv2
-
+from time import gmtime, strftime
+import shutil
+import datetime
+print (datetime.datetime.now().strftime("%Y_%m_%d_%H_%M"))
 
 def find_motion():
-	filename = str(time.time())+".mp4"
+	filename = str((datetime.datetime.now().strftime("%Y_%m_%d_%H_%M")))+".mp4"
 	frames_per_second = 24.0
 	res = '720p'
 
@@ -93,6 +96,14 @@ def find_motion():
 				out.release()
 				cap.release()
 				cv2.destroyAllWindows()
+
+				dir = 'stolen'
+				for f in os.listdir(dir):
+					os.remove(os.path.join(dir, f))
+
+				videoFileDestination = "C:\\Users\\adith\\OneDrive\\Documents\\PES\\Hackathons\\Tri-NIT\\"+str(filename)
+				shutil.move(str(videoFileDestination), 'C:\\Users\\adith\\OneDrive\\Documents\\PES\\Hackathons\\Tri-NIT\\stolen')
+				
 				x = spot_diff(frame1, frame2)
 				if x == 0:
 					print("running again")
@@ -113,5 +124,5 @@ def find_motion():
 		if cv2.waitKey(1) == 27:
 			cv2.destroyAllWindows()
 			break
-
+		
 	return
