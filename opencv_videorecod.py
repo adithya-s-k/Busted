@@ -15,7 +15,6 @@ filename = str(randomString(7))+".mp4"
 frames_per_second = 24.0
 res = '720p'
 
-
 def change_res(cap, width, height):
     cap.set(3, width)
     cap.set(4, height)

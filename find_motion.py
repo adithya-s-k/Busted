@@ -7,10 +7,9 @@ import cv2
 from time import gmtime, strftime
 import shutil
 import datetime
-print (datetime.datetime.now().strftime("%Y_%m_%d_%H_%M"))
 
 def find_motion():
-	filename = str((datetime.datetime.now().strftime("%Y_%m_%d_%H_%M")))+".mp4"
+	filename = "stoleVideo.mp4"
 	frames_per_second = 24.0
 	res = '720p'
 
@@ -126,3 +125,4 @@ def find_motion():
 			break
 		
 	return
+
