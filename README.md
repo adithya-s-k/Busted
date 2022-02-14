@@ -1,1 +1,1 @@
-This repository will contain the project for the Tri NIT hackathon.
+This project is a home burgler detection project which can sence if motion and if something is stolen it will send detect which object is stolen and it will also send a recording of the video when motion is detected
